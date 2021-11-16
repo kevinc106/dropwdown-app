@@ -17,6 +17,11 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevinc106/dropwdown-app.git"
+  },
+  "author": "Kevin Camacho",
   "eslintConfig": {
     "extends": [
       "react-app",
