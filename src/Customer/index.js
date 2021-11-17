@@ -1,19 +1,19 @@
 import React from "react";
-import './TodoItem.css'
+import './Customer.css';
 
 function Customer(props){  
     return(
-        <li className="Customer">
-        <span>
-            {props.customer.nit}
-        </span>
-        <p>
-            {props.customer.name}
-        </p>
-        <span>
-            {props.customer.reference_name}
-        </span>
-        </li>
+        <div className="Customer"> 
+            <span className="Customer-span">
+                NIT: {props.customer.nit}
+            </span>
+            <span className="Customer-span">
+                Name: {props.customer.name}
+            </span>
+            <span className="Customer-span">
+                REFERENCE NAME: {props.customer.reference_name}
+            </span>
+        </div>
     );
 }
 
