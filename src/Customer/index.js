@@ -11,7 +11,7 @@ function Customer(props){
                 Name: {props.customer.name}
             </span>
             <span className="Customer-span">
-                REFERENCE NAME: {props.customer.reference_name}
+                Reference Name: {props.customer.reference_name}
             </span>
         </div>
     );

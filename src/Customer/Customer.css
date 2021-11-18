@@ -1,6 +1,7 @@
 .Customer { 
+    background-color: #161b22;
     border-style: solid;
-    border-color: black;
+    border-color: rgb(197, 55, 55);
     border-radius: 15px;
     margin: 2em;
     padding: 2rem;

@@ -1,5 +1,5 @@
 import './App.css'; 
-import React, { useState, useEffect, useRef, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 import {Customer} from '../Customer' 
 
 const operations = 
@@ -45,10 +45,12 @@ function App() {
     setCustomers(customers.results);
   }
 
-  async function handleSearch(e) {
+  async function handleSearch(e) { 
+    setLoading(true);
     setValueOperation(e.target.value); 
     setQuery(e.target.value); 
     await setFecthCustomers();
+    setLoading(false);
   }
  
   useEffect(async() => {
@@ -67,6 +69,8 @@ function App() {
           <input className="InputSearchInput" type="text" value={query} onChange={handleSearch} placeholder="Search customer"></input> 
         </div>
         <span className="ResultCounter">Results: {customers.length}</span>
+        <div>{loading && 'Loading...'}</div>
+        <div>{error && 'Error'}</div>
         <div>
           {customers.map((customer) => (
             <Customer
@@ -74,8 +78,6 @@ function App() {
             />
           ))}
         </div>
-        <div>{loading && 'Loading...'}</div>
-        <div>{error && 'Error'}</div>
       </div>
        
     </React.Fragment>  
